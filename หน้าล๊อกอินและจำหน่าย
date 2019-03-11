@@ -14,8 +14,8 @@ while password_pass:
             password_pass=False
             break
     else:
-        print("!!! Wrong username please try again !!!")
-        time.sleep(1)
+        print("\n\t!!! Wrong username please try again !!!")
+        time.sleep(1.5)
         clear()
     
 
@@ -23,18 +23,32 @@ while password_pass:
 
 print("\n***Welcome to Bus Ticket Online Shop!***")
 print("Please Choose Your Destination")
-print("\nNo1. Payao ---> Lampang\nNo2. Payao ---> Chiang Rai\nNo3. Payao ---> Chiang Mai")
+print("\nNo1. Phayao ---> Lampang\nNo2. Phayao ---> Chiang Rai\nNo3. Phayao ---> Chiang Mai")
 
 destination=int(input("Your Destination : "))
 if destination ==1:
     print("\n\tPayao to Lampang\n")
     
-    print("\t*Status Choise*\n\tNo.001 : Adult\n\tNo.002 : Child\n\tN0.003 : Old\n\tNo.004 : Monk\n")
+    print("\t*Status Choice*\n\tNo.001 : Adult\n\tNo.002 : Child\n\tN0.003 : Old\n\tNo.004 : Monk\n")
+    while True:
+        status=int(input("\t--Select your Status : "))
+        if status in (1,2,3,4):
+            break
+        print("\t\tError")
+            
     
-    status=input("Select your Status : ")
     if status == 1:
-        print("\tPrice Ticket Payao to Lampang is : %d BATH."%Pao_Lam+adult_seat)
+        Pao_Lam_adult=210+9
 
+        print("\n\tPrice Ticket Phayao to Lampang is : %d BATH."%Pao_Lam_adult)
     elif status ==2:
-        print("\tPrice Ticket Payao to Lampang is : %d BATH."%Pao_Lam+child_seat)
+        Pao_Lam_child=210+5
+        print("\n\tPrice Ticket Phayao to Lampang is : %d BATH."%Pao_Lam_child)
+    elif status ==3:
+        Pao_Lam_old=210+6
+        print("\n\tPrice Ticket Phayao to Lampang is : %d BATH."%Pao_Lam_old)
+    elif status ==4:
+        Pao_Lam_monk=210+4
+        print("\n\tPrice Ticket Phayao to Lampang is : %d BATH."%Pao_Lam_monk)
+
 
