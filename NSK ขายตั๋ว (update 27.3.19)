@@ -2,135 +2,153 @@ import os
 import time
 clear = lambda :os.system("cls")
 
-a =[["Staff001","pass1"],["user2","pass2"],["user3","pass3"]]
+a =[["Staff001","pass1"],["user1","pass1"],["user2","pass4"],["notty","pass"]]  #ระบบสมาชิก
 password_pass=True
 while password_pass:
-    user=input("Username ID : ")
-    pasw=input("Password    : ")
+    user=input("\n\n\t\tUsername ID : ")
+    pasw=input("\t\tPassword    : ")
     for i in range(len(a)):
         if user == a[i][0] and pasw == a[i][1]:
-            print("\n---Hello :) ---,",a[i][0])
+            print("\n\t\t---Hello :) ---,",a[i][0])
             password_pass=False
             break
     else:
-        print("\n\t!!! Wrong username please try again !!!")
+        print("\n\t\t!!! Wrong Username please try again !!!")
         time.sleep(2)
         clear()
     
 
-def jakpot_dc(price):
+def jackpot_dc(price):
     target=7
     print("\n\t\t--- !!EVENT TIME!! ---")
-    num=int(input('\n\tPlease pin the number 1-20 to get spacial price : '))
+    time.sleep(1)
+    num=int(input('\n\tPlease pin the number 1-10 to Get Spacial price : '))
     if num == target:
-        print('\n\t\t -- !!!JECKPOT!!! -- \n\n\tYou can get spacial price!!')
-        print('\n\tYour ticket price is   %d BATH.'%price)
+        print('\n\t\t-- !!!JACKPOT!!! --')
+        time.sleep(0.5)
+        print('\t\t-- !!!JACKPOT!!! --')
+        time.sleep(0.5)
+        print('\t\t-- !!!JACKPOT!!! --')
+        time.sleep(1)
+        print('\n\t!! You can get spacial price !!')
+        time.sleep(2)
+        print('\n\n\t<<< Your ticket price is | %d BATH. >>>'%price)
+        time.sleep(2)
     else:
-            print('\n\tSorry,And Good luck next time!')
-    print("\n\t\t!!!Thank you!!!")
+        time.sleep(1)
+        print('\n\tSorry,And Good luck next time!')
+    print("\n\t________________________________________")
+    time.sleep(2)
     
     
 def status_():
-    print("\t*Status Choice*\n\tNo.001 : Adult\n\tNo.002 : Child\n\tN0.003 : Old\n\tNo.004 : Monk\n")
+    print("\t<> Status Choice <>\n\tNo.001 : Adult\n\tNo.002 : Kids\n\tN0.003 : Old\n\tNo.004 : Monk\n")
 
-print("\n***Welcome to Bus Ticket Online Shop!***")
-print("Please Choose Your Destination")
-print("\nNo1. Phayao ---> Lampang\nNo2. Phayao ---> Chiang Rai\nNo3. Phayao ---> Chiang Mai")
+print("\n\t\t<> Welcome to Bus Ticket Online Shop! <>")
+print("\n\t| Please Choose Your Destination |")
+print("\n\tNo1. Phayao ---> Lampang\n\tNo2. Phayao ---> Chiang Rai\n\tNo3. Phayao ---> Chiang Mai")
 
-destination=int(input("Your Destination : "))
+destination=int(input("\n\t<<>> Your Destination <<>> | "))
 
 #_______________________________________________________________________________________________________
 
 if destination ==1:
-    print("\n\tPhayao to Lampang\n")
+    print("\n\t------Phayao to Lampang------\n")
     
     status_()
     
-    status=int(input("\t--Select your Status : "))
+    status=int(input("\t <<>> Select your Status <<>> | "))
     if status == 1:
-        Pao_Lam_adult=210+9
-        print("\n\tPrice Ticket Payao to Lampang is :   %d BATH."%Pao_Lam_adult)
-        if Pao_Lam_adult == 219:
-            jakpot_dc(180)
+        Pao_Lam_adult=150+5
+        print("\n\tPrice Ticket Payao to Lampang is |   %d BATH."%Pao_Lam_adult)
+        if Pao_Lam_adult == 155:
+            jackpot_dc(130)
     elif status ==2:
-        Pao_Lam_child=210+5
-        print("\n\tPrice Ticket Phayao to Lampang is : %d BATH."%Pao_Lam_child)
-        if Pao_Lam_child == 215:
-            jakpot_dc(170)
+        Pao_Lam_child=120+5
+        print("\n\tPrice Ticket Phayao to Lampang is | %d BATH."%Pao_Lam_child)
+        if Pao_Lam_child == 125:
+            jackpot_dc(100)
     elif status ==3:
-        Pao_Lam_old=210
-        print("\n\tPrice Ticket Phayao to Lampang is : %d BATH."%Pao_Lam_old)
-        if Pao_Lam_old == 210:
-            jakpot_dc(160) 
+        Pao_Lam_old=140
+        print("\n\tPrice Ticket Phayao to Lampang is | %d BATH."%Pao_Lam_old)
+        if Pao_Lam_old == 140:
+            jackpot_dc(120) 
     elif status ==4:
-        Pao_Lam_monk=210+4
-        print("\n\tPrice Ticket Phayao to Lampang is : %d BATH."%Pao_Lam_monk)
-        if Pao_Lam_monk == 214:
-            jakpot_dc(170)
+        Pao_Lam_monk=130
+        print("\n\tPrice Ticket Phayao to Lampang is | %d BATH."%Pao_Lam_monk)
+        if Pao_Lam_monk == 130:
+            jackpot_dc(105)
             
 #_________________________________________________________________________________________________
             
 if destination ==2:
-    print("\n\tPhayao to Chiang Rai\n")
+    print("\n\t------Phayao to Chiang Rai------\n")
     status_()
     
-    status=int(input("\t--Select your Status : "))
+    status=int(input("\t <<>> Select your Status <<>> | "))
     if status ==1:
         Pao_Rai_adult=150+5
-        print("\n\tPrice Ticket Phayao to Chiang Rai is : %d BATH."%Pao_Rai_adult)
+        print("\n\tPrice Ticket Phayao to Chiang Rai is | %d BATH."%Pao_Rai_adult)
         if Pao_Rai_adult == 155:
-            jakpot_dc(130)
+            jackpot_dc(130)
     elif status ==2:
         Pao_Rai_child=135+5
-        print("\n\tPrice Ticket Phayao to Chiang Rai is : %d BATH."%Pao_Rai_child)
+        print("\n\tPrice Ticket Phayao to Chiang Rai is | %d BATH."%Pao_Rai_child)
         if Pao_Rai_child:
-            jakpot_dc(115)
+            jackpot_dc(115)
     elif status ==3:
         Pao_Rai_old=145+5
-        print("\n\tPrice Ticket Phayao to Chiang Rai is : %d BATH."%Pao_Rai_old)
+        print("\n\tPrice Ticket Phayao to Chiang Rai is | %d BATH."%Pao_Rai_old)
         if Pao_Rai_old:
-            jakpot_dc(125)
+            jackpot_dc(125)
     elif status ==4:
         Pao_Rai_monk=140+5
-        print("\n\tPrice Ticket Phayao to Chiang Rai : %d BATH."%Pao_Rai_monk)
+        print("\n\tPrice Ticket Phayao to Chiang Rai | %d BATH."%Pao_Rai_monk)
         if Pao_Rai_monk:
-            jakpot_dc()
+            jackpot_dc(120)
 #________________________________________________________________________________________________________
             
 if destination ==3:
-    print("\n\tPhayao to Chiang Mai\n")
+    print("\n\t------Phayao to Chiang Mai------\n")
     status_()
     
-    status=int(input("\t--Select your Status : "))
+    status=int(input("\t <<>> Select your Status <<>> | "))
     if status ==1:
         Pao_Mai_adult=160+5
-        print("\n\tPrice Ticket Phayao to Chiang Mai is : %d BATH."%Pao_Mai_adult)
+        print("\n\tPrice Ticket Phayao to Chiang Mai is | %d BATH."%Pao_Mai_adult)
         if Pao_Mai_adult == 165:
-            jakpot_dc(135)
+            jackpot_dc(135)
     elif status ==2:
         Pao_Mai_child=145+5
-        print("\n\tPrice Ticket Phayao to Chiang Mai is : %d BATH."%Pao_Mai_child)
+        print("\n\tPrice Ticket Phayao to Chiang Mai is | %d BATH."%Pao_Mai_child)
         if Pao_Mai_child:
-            jakpot_dc(115)
+            jackpot_dc(115)
     elif status ==3:
         Pao_Mai_old=155
-        print("\n\tPrice Ticket Phayao to Chiang Mai is : %d BATH."%Pao_Mai_old)
+        print("\n\tPrice Ticket Phayao to Chiang Mai is | %d BATH."%Pao_Mai_old)
         if Pao_Mai_old:
-            jakpot_dc(125)
+            jackpot_dc(125)
     elif status ==4:
         Pao_Mai_monk=140+5
-        print("\n\tPrice Ticket Phayao to Chiang Mai : %d BATH."%Pao_Mai_monk)
+        print("\n\tPrice Ticket Phayao to Chiang Mai | %d BATH."%Pao_Mai_monk)
         if Pao_Mai_monk:
-            jakpot_dc(130)
+            jackpot_dc(130)
 
-print("\n\t--<< EXTRA SERVICE >>--\n")
+print("\n\t\t--<< EXTRA SERVICE >>--\n")
+time.sleep(1.5)
 if destination ==1:
-    print("\tSNACK : 1 Potato chips\n\tDRINK : COCA cola Classic")
+    print("\t\tSNACK : 1 Potato chips\n\t\tDRINK : COCA cola Classic")
 elif destination ==2:
-    print("\tSNACK : 1 Potato chips\n\tDRINK : COCA cola Classic")
+    print("\t\tSNACK : 1 Potato chips\n\t\tDRINK : COCA cola Classic")
 elif destination ==3:
-    print("\tSNACK : 1 Potato chips\n\tDRINK : COCA cola Classic")
-        
+    print("\t\tSNACK : 1 Potato chips\n\t\tDRINK : COCA cola Classic")
+time.sleep(2)
+    
+    
+print("\n\n\n\t\t!!! THANK YOU !!!")
+time.sleep(1.5)
+print("\t<-- (: HAVE A GOOD TRIP :) -->")
+time.sleep(3)
 #destination+status+event
 
 '''
@@ -144,4 +162,5 @@ elif destination ==3:
 **5.อาจมีของแถม ขนม และ น้ำดื่ม
 '''
 
+#ส่วนของการ ติดเงิน
 
